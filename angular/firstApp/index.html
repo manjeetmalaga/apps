@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myNinjaApp">
+    <head>
+        <title>TheNetNinja Angular Playlist</title>
+        <link href="content/css/styles.css" rel="stylesheet" type="text/css" />
+        <!-- Angular Scripts -->
+        <script src="app/lib/angular.min.js"></script>
+        <script src="app/app.js"></script>
+    </head>
+    <body ng-init="ninjas=['yoshi', 'crystal', 'ryu', 'shaun']">
+        <input type="text" ng-model="favMeat" placeholder="enter your fav meat" />
+        <p>Your fav meat is: {{favMeat}}</p>
+        <ul>
+            <li ng-repeat="ninja in ninjas">{{ninja }}</li>
+        </ul>
+        <main ng-view>
+            <!-- When a user types /contact, dynamically inject the contact.html view -->
+            <!-- When a user types /about, dynamically inject the about.html view -->
+        </main>
+    </body>
+</html> 
